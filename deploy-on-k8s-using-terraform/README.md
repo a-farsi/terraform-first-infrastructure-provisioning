@@ -1,3 +1,4 @@
+[repo parent](../README.md)
 # Déploiement WordPress et MySQL sur Kubernetes avec Terraform
 
 **Objectif :** Déployer une application WordPress complète avec sa base de données MySQL sur un cluster Kubernetes en utilisant Terraform comme outil d'Infrastructure as Code.
