@@ -3,6 +3,9 @@
 
 **Objectif :** Déployer une application WordPress complète avec sa base de données MySQL sur un cluster Kubernetes avec Helm tout en utilisant Terraform comme outil d'Infrastructure as Code.
 
+## Pour installer Helm : 
+Voir ce lien pour installer Helm :  https://github.com/a-farsi/example-install-helm
+
 ## Étapes de déploiement :
 1. Créer la structure Helm pour la base de donnnées
 2. Editer son deployment, le service et les valeuers variabilisées dans le fichier values.yaml 
@@ -80,3 +83,22 @@ resource "helm_release" "wordpress" {
 }
 
 ``` 
+
+### Création et affichage de l'infrastructure:
+
+La création de l'infrastructure se fait par l'exécution des commandes
+
+```
+terraform init
+terraform plan
+terraform apply -auto-approve
+```
+
+Pour avoir un aperçu rapide de l'état général des ressources déployées dans notre cluster, nous exécutons la commande suivante dans le namespace default: 
+
+```
+kubectl get all
+```
+<p align="center">
+<img src="./figures/get-all-resources.png">
+</p>
