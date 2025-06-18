@@ -83,6 +83,11 @@ resource "helm_release" "wordpress" {
 }
 
 ``` 
+### Structure Helm affichée avec la commande _tree_
+
+<p align="center">
+<img src="./figures/helm-app-structure.png" width="60%">
+</p>
 
 ### Création et affichage de l'infrastructure:
 
@@ -101,6 +106,14 @@ kubectl get all
 ```
 <p align="center">
 <img src="./figures/get-all-resources.png">
+</p>
+
+### Accéder à wordpress:
+
+Pour afficher notre application wordpress, nous devons saisir l'url : _http://<address-ip>:32000_
+
+<p align="center">
+<img src="./figures/wordpress-app.png">
 </p>
 
 ### Supprimer l'infrastructure:
