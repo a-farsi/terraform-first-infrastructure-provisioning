@@ -1,0 +1,29 @@
+replicaCount: 1
+image:
+ repository: mysql:5.6
+ pullPolicy: IfNotPresent
+deployment:
+ name: mysql-deployment
+service:
+ name: mysql-service
+ type: ClusterIP
+ port: 3306
+ #primary:
+ #  resources:
+ #    requests:
+ #      memory: "256Mi"
+ #      cpu: "250m"
+ #    limits:
+ #     memory: "512Mi"
+ #     cpu: "500m"
+
+ #secondary:
+ #  resources:
+ #    requests:
+ #      memory: "128Mi"
+ #      cpu: "100m"
+ #    limits:
+ #      memory: "256Mi"
+ #      cpu: "250m"
+
+

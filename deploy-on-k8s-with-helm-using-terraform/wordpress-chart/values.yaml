@@ -1,0 +1,29 @@
+replicaCount: 1
+image:
+ repository: wordpress:4.8-apache
+ pullPolicy: IfNotPresent
+deployment:
+ name: wordpress-deployment
+service:
+ name: wordpress-service
+ type: NodePort
+ port: 80
+ nodePort: 32000
+ #  primary:
+ #  resources:
+ #    requests:
+ #      memory: "256Mi"
+ #     cpu: "250m"
+ #   limits:
+ #     memory: "512Mi"
+ #     cpu: "500m"
+
+ #secondary:
+ # resources:
+ #   requests:
+ #     memory: "128Mi"
+ #     cpu: "100m"
+ #   limits:
+ #     memory: "256Mi"
+ #     cpu: "250m"
+
