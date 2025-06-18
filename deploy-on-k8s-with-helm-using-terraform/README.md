@@ -102,3 +102,11 @@ kubectl get all
 <p align="center">
 <img src="./figures/get-all-resources.png">
 </p>
+
+### Supprimer l'infrastructure:
+
+pour supprimer toute l'infrastructure, nous exécutons la commande : 
+
+```
+terraform destroy -auto-approve
+```
